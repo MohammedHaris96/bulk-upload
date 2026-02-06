@@ -1,7 +1,27 @@
-To start the project, first install dependencies using npm install, then create a .env file in the project root and add required values such as 
-PORT,
-NODE_ENV,
-MONGODB_URI,
-JWT_SECRET (a long random string),
-JWT_EXPIRATION
-and finally run the application using npm start, after which the server will be available at http://localhost:3000.
+🚀 NestJS MongoDB Auto-Seeder App
+
+This is a basic NestJS application that automatically seeds a MongoDB database on startup.
+
+What it does on app start:
+
+🔍 Checks if the database is empty
+
+📦 If empty, inserts ~2 million records
+
+✅ If data already exists, it skips seeding and continues startup normally
+
+This project is mainly intended for testing large datasets, performance tuning, and pagination scenarios.
+
+🚀 Getting Started
+
+npm install
+
+Create a .env file in the project root and add the following variables:
+
+PORT=3000
+NODE_ENV=development
+MONGODB_URI=your_mongodb_connection_string
+JWT_SECRET=your_long_random_secret_string
+JWT_EXPIRATION=1d
+
+Start the Application - npm start
